@@ -8,14 +8,14 @@ before_script:
 stages:
   - deploy
 
-cache:
-  paths:
-    - node_modules
 
 pages:
   stage: deploy
   script:
     - npm run deploy
+  cache:
+    paths:
+      - node_modules/
   artifacts:
     paths:
       - public
