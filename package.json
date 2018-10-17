@@ -2,18 +2,30 @@
   "name": "fcc-timestamp-microservice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./server/server.js",
+  "author": "James Itum",
   "scripts": {
+    "deploy": "node ./server/server.js",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/isemaj/fcc-timestamp-microservice.git"
   },
-  "author": "James Itum",
   "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/isemaj/fcc-timestamp-microservice/issues"
   },
-  "homepage": "https://gitlab.com/isemaj/fcc-timestamp-microservice#readme"
+  "homepage": "https://gitlab.com/isemaj/fcc-timestamp-microservice#readme",
+  "engines": {
+    "node": "8.10.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
 }
