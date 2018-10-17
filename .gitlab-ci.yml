@@ -1,0 +1,23 @@
+image: node:8.12.0-jessie
+
+before_script:
+  - node -v
+  - npm -v
+  - npm install
+
+stages:
+  - deploy
+
+cache:
+  paths:
+    - node_modules
+
+pages:
+  stage: deploy
+  script:
+    - npm run deploy
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
