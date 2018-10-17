@@ -5,33 +5,30 @@ before_script:
   - npm -v
 
 stages:
-  - prep
   - build 
-  - deploy
-
-prep:
-  stage: prep
-  script: 
-    - npm install 
-  artifacts:
-    paths:
-      - node_modules
-  cache:
-    paths:
-      - node_modules
+  - production
 
 build:
   stage: build
   script:
-    - npm run deploy
+    - npm install
   artifacts:
     paths:
+      - node_modules
       - public
+  cache:
+    paths:
+      - node_modules
 
-pages:
-  stage: deploy
-  artifacts:
-    paths:
-      - public
+production:
+  stage: production 
+  image: ruby:latest
+  script: 
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=isemaj-timestamp-microservice --api-key=$HEROKU_API_KEY
   only:
     - master
+
+
