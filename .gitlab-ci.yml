@@ -3,19 +3,33 @@ image: node:8.12.0-jessie
 before_script:
   - node -v
   - npm -v
-  - npm install
 
 stages:
+  - prep
+  - build 
   - deploy
 
+prep:
+  stage: prep
+  script: 
+    - npm install 
+  artifacts:
+    paths:
+      - node_modules
+    cache:
+      paths:
+        - node_modules
+
+build:
+  stage: build
+  script:
+    - npm run deploy
+  artifacts:
+    paths:
+      - public
 
 pages:
   stage: deploy
-  script:
-    - npm run deploy
-  cache:
-    paths:
-      - node_modules/
   artifacts:
     paths:
       - public
