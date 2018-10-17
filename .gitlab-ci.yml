@@ -16,9 +16,9 @@ prep:
   artifacts:
     paths:
       - node_modules
-    cache:
-      paths:
-        - node_modules
+  cache:
+    paths:
+      - node_modules
 
 build:
   stage: build
