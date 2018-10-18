@@ -12,6 +12,8 @@ build:
   stage: build
   script:
     - npm install
+    - ls -l
+    - cat package.json
   artifacts:
     paths:
       - node_modules
@@ -21,6 +23,7 @@ build:
       - node_modules
 
 production:
+  type: deploy
   stage: production 
   image: ruby:latest
   script: 
