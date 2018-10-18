@@ -2,15 +2,15 @@
 <html>
    <head>
       <title>Timestamp Microservice</title>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="style.css">
    </head>
 
    <body>
       <div class="container">
-        <h2>API Project: Timestamp Microservice</h2>
+        <h1>API Project: Timestamp Microservice</h1>
         <h3>User Stories (WIP):</h3>
         <ol class="user-stories">
-          
           <li>The API endpoint is <code>GET [project_url]/api/timestamp/:date_string?</code></li>
           <li>A date string is valid if can be successfully parsed by <code>new Date(date_string)</code>.<br>
           Note that the unix timestamp needs to be an <strong>integer</strong> (not a string) specifying <strong>milliseconds</strong>.<br> 
@@ -24,7 +24,7 @@
         </ol>
 
         <h3>Example Usage:</h3>
-        <ul>
+        <ul class="example-usage">
           <li><a href="api/timestamp/2015-12-25" target="_blank">
             [project url]/api/timestamp/2015-12-25</a></li>
           <li><a href="api/timestamp/1450137600000" target="_blank">[project url]/api/timestamp/1450137600</a></li>

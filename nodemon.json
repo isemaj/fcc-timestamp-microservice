@@ -5,7 +5,7 @@
   ],
   "verbose": true,
   "watch": [
-    "views/"
+    "public/"
   ],
   "env": {
     "PORT": 9000
