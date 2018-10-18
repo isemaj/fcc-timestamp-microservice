@@ -1,27 +1,5 @@
 image: node:8.12.0-jessie
 
-before_script:
-  - node -v
-  - npm -v
-
-stages:
-  - build 
-  - production
-
-build:
-  stage: build
-  script:
-    - npm install
-    - ls -l
-    - cat package.json
-  artifacts:
-    paths:
-      - node_modules
-      - public
-  cache:
-    paths:
-      - node_modules
-
 production:
   type: deploy
   stage: production 
