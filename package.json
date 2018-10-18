@@ -2,7 +2,7 @@
   "name": "fcc-timestamp-microservice",
   "version": "1.0.0",
   "description": "",
-  "main": "./server/server.js",
+  "main": "server.js",
   "author": "James Itum",
   "scripts": {
     "deploy": "node server.js",
