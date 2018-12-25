@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    ".git",
+    "node_modules/*"
+  ],
+  "verbose": true,
+  "watch": [
+    "public/"
+  ],
+  "env": {
+    "PORT": 9000
+  },  
+  "ext": "js"
+}
