@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/isemaj/fcc-timestamp-microservice.git"
   },
-  "license": "MIT",
+  "license": "GPLv3",
   "bugs": {
     "url": "https://gitlab.com/isemaj/fcc-timestamp-microservice/issues"
   },
