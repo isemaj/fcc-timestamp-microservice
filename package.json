@@ -9,15 +9,7 @@
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/isemaj/fcc-timestamp-microservice.git"
-  },
   "license": "GPLv3",
-  "bugs": {
-    "url": "https://gitlab.com/isemaj/fcc-timestamp-microservice/issues"
-  },
-  "homepage": "https://gitlab.com/isemaj/fcc-timestamp-microservice#readme",
   "engines": {
     "node": "8.10.0"
   },
